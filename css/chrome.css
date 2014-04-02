@@ -120,10 +120,11 @@ figure {
  color: #fff;
  font-size: .8em;
  text-align: right;
- text-shadow: 0 0 10px #000;
+ text-shadow: 0 0 6px #000;
  position: absolute;
  right: 1em;
- bottom: 1em; }
+ bottom: 1em;
+ -webkit-writing-mode: vertical-rl; }
 #content .photoset {
  display: table;
  table-layout: fixed;

@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 @font-face {
  font-family: Asebi;
  src: local('Asebi Mincho Regular'),
@@ -64,10 +64,11 @@ a:hover,a:active {
  color: #222; }
 article p {
  margin: 0;
- display: inline;
- text-indent: 1em; }
+ display: inline; }
+article p:before {
+ content: '\3000'; }
 article p:after {
- content: "\A";
+ content: '\A';
  white-space: pre; }
 article img {
  max-width: 700px;

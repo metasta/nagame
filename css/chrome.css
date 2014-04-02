@@ -121,7 +121,7 @@ figure {
 #content figure img {
  display: none; }
 #content figure .html_photoset {
- margin: 0 auto; }
+ display: inline; }
 #content figcaption {
  color: #fff;
  font-size: .8em;

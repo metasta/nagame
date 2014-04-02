@@ -144,11 +144,8 @@ figure {
  content: '\FF08'; }
 #content .quote .source:after {
  content: '\FF09'; }
-#content .link a {
- border: 3px solid transparent;
- border-radius: 8px; }
-#content .link a:hover {
- border-color: rgba(119,85,34,.7); }
+#content .link .host {
+ font-size: .8em; }
 #content .chat ol {
  list-style-type: none; }
 #content .chat li {

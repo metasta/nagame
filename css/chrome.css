@@ -116,9 +116,10 @@ img {
 #content figure {
  width: 100%;
  height: 100%;
- background-color: #000; }
+ background-color: #000;
+ vertical-align: middle; }
 #content figure img {
- display: block;
+ display: inline-block;
  margin: 0 auto;
 }
 /*

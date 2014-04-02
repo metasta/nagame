@@ -93,7 +93,13 @@ figure {
 #content .link,
 #content .chat {
  margin: 0 0 0 7.6rem; }
-#content .photo,
+#content .photo {
+ width: 720px;
+ height: 26em;
+ background-color: #000;
+ -webkit-writing-mode: horizontal-tb;
+ -webkit-column-break-inside: avoid;
+ position: relative; }
 #content .audio,
 #content .video { }
 #content p {
@@ -121,14 +127,10 @@ figure {
  width: 100%;
  height: 100%;
  position: relative; }
-*/
 #content figure {
- width: 720px;
- height: 26em;
- background-color: #000;
  position: relative;
- -webkit-writing-mode: horizontal-tb;
- -webkit-column-break-inside: avoid; }
+}
+*/
 #content .img {
  background-repeat: no-repeat;
  background-position: center center;

@@ -143,10 +143,7 @@ figure {
  content: '\FF08'; }
 #content .quote .source:after {
  content: '\FF09'; }
-#content .link {
- border: 1px solid #444;
- border-radius: 10px;
-}
+#content .link { }
 #content .chat ol {
  list-style-type: none; }
 #content .chat li {

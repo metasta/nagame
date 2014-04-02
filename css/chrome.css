@@ -147,6 +147,9 @@ figure {
  content: '\FF09'; }
 #content .link .host {
  font-size: .8rem; }
+#content .link .host:before {
+ content: '\A';
+ white-space: pre; }
 #content .chat ol {
  list-style-type: none; }
 #content .chat li {

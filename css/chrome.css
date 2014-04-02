@@ -83,19 +83,19 @@ article.chat .line:before {
  content: '\300C' ; }
 article.chat .line:after {
  content: '\300D'; }
-body > header {
+#header {
  position: absolute;
  top: 0;
  right: 0;
  width: 200px;
  height: 1280px; }
-body > header > h1 {
+#header > h1 {
  -webkit-writing-mode: vertical-rl;
  font-size: 300%;
  font-weight: bold;
  margin: 1em auto;
  white-space: nowrap; }
-body > header > p {
+#header > p {
  -webkit-writing-mode: vertical-rl;
  margin: 0 auto;
  display: block;

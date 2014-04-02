@@ -104,18 +104,19 @@ footer {
  -webkit-column-break-before: always;
  -webkit-writing-mode: horizontal-tb;
  width: 100%;
- font-family: Palatino,serif;
- text-align: center;
  position: relative; }
-a[rel="next"] {
+footer nav {
+ text-align: center;
+ font-family: Palatino,serif; }
+footer nav a[rel="next"] {
  position: absolute;
  left: 0; }
-a[rel="next"]:before {
+footer nav a[rel="next"]:before {
  content: "\2190\A0"; }
-a[rel="prev"] {
+footer nav a[rel="prev"] {
  position: absolute;
  right: 0; }
-a[rel="prev"]:after {
+footer nav a[rel="prev"]:after {
  content: "\A0\2192"; }
 footer .copyright {
  position: absolute;

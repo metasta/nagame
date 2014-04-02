@@ -116,13 +116,12 @@ figure {
  background-position: center center;
  background-size: contain;
  -webkit-column-break-inside: avoid; }
+#content figure img {
+ display: none; }
 #content figure {
  width: 100%;
  height: 100%;
  position: relative; }
-#content figure img {
- display: none; }
-#content figure .html_photoset { }
 #content figcaption {
  color: #fff;
  font-size: .8em;
@@ -145,7 +144,7 @@ footer {
  -webkit-column-break-inside: avoid;
  -webkit-writing-mode: horizontal-tb;
  width: 100%;
- height: 13em;
+ height: 10em;
  position: relative; }
 footer nav {
  text-align: center;
@@ -167,5 +166,3 @@ footer .copyright {
  font-size: .8rem;
  color: #777;
 }
-.m {
- font-family: Yu,serif; }

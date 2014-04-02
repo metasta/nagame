@@ -94,15 +94,16 @@ figure {
 #content .chat {
  margin: 0 0 0 5.7rem;
  padding: 0 0 0 1.9rem; }
-#content .photo {
+#content .photo,
+#content .audio,
+#content .video {
  width: 720px;
  height: 26em;
- background-color: #000;
  -webkit-writing-mode: horizontal-tb;
  -webkit-column-break-inside: avoid;
  position: relative; }
-#content .audio,
-#content .video { }
+#content .photo {
+ background-color: #000;}
 #content p {
  margin: 0;
  display: inline; }

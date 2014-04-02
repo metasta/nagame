@@ -88,7 +88,7 @@ article.chat .line:after {
  top: 0;
  right: 0;
  width: 200px;
- height: 1280px; }
+ max-height: 1280px; }
 #header > h1 {
  -webkit-writing-mode: vertical-rl;
  font-size: 300%;
@@ -117,6 +117,12 @@ a[rel="prev"] {
  right: 0; }
 a[rel="prev"]:after {
  content: "\A0\2192"; }
+footer .copyright {
+ position: absolute;
+ left: 0;
+ bottom: 5em;
+ font-size: .8rem;
+}
 #content {
  width: 720px;
  height: 26em;

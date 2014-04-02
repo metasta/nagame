@@ -93,7 +93,8 @@ figure {
 #content .link,
 #content .chat {
  -webkit-writing-mode: vertical-rl;
- margin:0 0 0 7.6em; }
+ width: 100% ;
+ margin: 0 0 0 7.6em; }
 #content p {
  margin: 0;
  display: inline; }

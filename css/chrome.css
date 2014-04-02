@@ -103,7 +103,10 @@ figure {
  -webkit-column-break-inside: avoid;
  position: relative; }
 #content .photo {
- background-color: #000;}
+ background-color: #000; }
+#content .audo,
+#content .video {
+ border: 1px solid #222; }
 #content p {
  margin: 0;
  display: inline; }

@@ -120,8 +120,7 @@ figure {
  position: relative; }
 #content figure img {
  display: none; }
-#content figure .html_photoset {
- display: inline; }
+#content figure .html_photoset { }
 #content figcaption {
  color: #fff;
  font-size: .8em;
@@ -129,8 +128,7 @@ figure {
  text-shadow: 0 0 10px #000;
  position: absolute;
  right: 1em;
- bottom: 1em;
-}
+ bottom: 1em; }
 #content .chat ol {
  list-style-type: none;
  margin-top: 2em; }

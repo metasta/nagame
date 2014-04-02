@@ -130,8 +130,7 @@ figure {
  right: 1em;
  bottom: 1em; }
 #content .chat ol {
- list-style-type: none;
- margin-top: 2em; }
+ list-style-type: none; }
 #content .chat li {
  text-indent: -2em; }
 #content .chat .name {

@@ -70,6 +70,9 @@ article p:before {
 article p:after {
  content: "\A";
  white-space: pre; }
+article img {
+ max-width: 700px;
+ max-height: 26em; }
 body > header {
  position: absolute;
  top: 0;

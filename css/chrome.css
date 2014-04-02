@@ -102,6 +102,10 @@ a:hover,a:active {
  background-size: contain;
  -webkit-column-break-before: always;
  -webkit-column-break-after: always; }
+#content figcaption {
+ color: #fff;
+ text-shadow: 0 0 5px rgba(255,255,255,.5);
+}
 #content .chat ol {
  list-style-type: none;
  margin-top: 2em; }

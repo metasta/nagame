@@ -125,6 +125,7 @@ figure {
 #content figcaption {
  color: #fff;
  font-size: .8em;
+ text-align: right;
  text-shadow: 0 0 10px #000;
  position: absolute;
  right: 1em;

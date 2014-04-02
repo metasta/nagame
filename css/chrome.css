@@ -117,11 +117,11 @@ img {
  width: 100%;
  height: 100%;
  background-color: #000;
+ display: table-cell;
+ text-align: center;
  vertical-align: middle; }
 #content figure img {
- display: inline-block;
- margin: 0 auto;
-}
+ display: inline-block; }
 /*
 #content figure img {
  display: none; }

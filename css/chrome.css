@@ -101,10 +101,11 @@ figure {
  height: 26em;
  -webkit-writing-mode: horizontal-tb;
  -webkit-column-break-inside: avoid;
- position: relative; }
+ box-sizing: border-box; }
 #content .photo {
- background-color: #000; }
-#content .audio,
+ background-color: #000;
+ position: relative; }
+ #content .audio,
 #content .video {
  border: 1px solid #222; }
 #content p {

@@ -147,6 +147,7 @@ figure {
 #content .link .host {
  font-size: .8rem; }
 #content .link .source {
+ display: block;
  text-align: right;
  font-size: .85rem; }
 #content .chat ol {

@@ -10,12 +10,10 @@
  src: local(YuMincho), local('游明朝'); }
 @font-face {
  font-family: Hiragino;
- src: local('Hiragino Mincho ProN');
-}
+ src: local('Hiragino Mincho ProN'); }
 @font-face {
  font-family: Palatino;
- src: local('Palatino'), local('Palatino Linotype');
-}
+ src: local('Palatino'), local('Palatino Linotype'); }
 body {
  width: 980px;
  margin: 5em auto;
@@ -23,6 +21,8 @@ body {
  line-height: 1.9;
  font-family: Yu,serif;
  text-align: justify;
+ word-break: normal;
+ word-wrap: break-word;
  color: #222;
  text-shadow: 0 0 1px rgba(0,0,0,.2);
  position: relative; }
@@ -79,8 +79,7 @@ article.chat li {
 article.chat .name {
  font-weight: bold; }
 article.chat .line {
- quotes: "\300C" "\300D" "\300E" "\300F";
-}
+ quotes: "\300C" "\300D" "\300E" "\300F"; }
 article.chat .line:before {
  content: open-quote; }
 article.chat .line:after {

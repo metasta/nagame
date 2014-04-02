@@ -81,9 +81,11 @@ article.chat .name {
 article.chat .line {
  quotes: "\300C" "\300D" "\300E" "\300F"; }
 article.chat .line:before {
- content: open-quote; }
+ content: open-quote;
+ white-space: nowrap; }
 article.chat .line:after {
- content: close-quote; }
+ content: close-quote;
+ white-space: nowrap;}
 body > header {
  position: absolute;
  top: 0;

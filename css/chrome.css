@@ -35,20 +35,20 @@ h1,h2,h3,h4,h5,h6 {
  line-height: 1.9rem; }
 h1 {
  font-weight: bold;
- font-size: 160%;
+ font-size: 1.6rem;
  /* 1.9 [rem/line] x (4 - 1) [lines] = 5.7 [rem] */
  margin: 4rem 2.85rem 0 2.85rem; }
 h2 {
  font-weight: bold;
- font-size: 135%;
+ font-size: 1.35rem;
  /* 1.9 [rem/line] x (3 - 1) [lines] = 3.8 [rem] */
  margin: 6rem 1.9rem 0 1.9rem; }
 h3 {
- font-size: 115%;
+ font-size: 1.15rem;
  /* 1.9 [rem/line] x (2 - 1) [lines] = 1.9 [rem] */
  margin: 8rem 0.95rem 0 0.95rem; }
 h4,h5,h6 {
- font-size: 100%;
+ font-size: 1rem;
  /* 1.9 [rem/line] x (2 - 1) [lines] = 1.9 [rem] */
  margin: 10rem 0.95rem 0 0.95rem; }
 h1 a:link,
@@ -145,7 +145,7 @@ figure {
 #content .quote .source:after {
  content: '\FF09'; }
 #content .link .host {
- font-size: .8em; }
+ font-size: .8rem; }
 #content .chat ol {
  list-style-type: none; }
 #content .chat li {

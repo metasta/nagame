@@ -78,14 +78,10 @@ article.chat li {
  text-indent: -2em; }
 article.chat .name {
  font-weight: bold; }
-article.chat .line {
- quotes: "\300C" "\300D" "\300E" "\300F"; }
 article.chat .line:before {
- content: open-quote;
- white-space: nowrap; }
+ content: '\300C' ; }
 article.chat .line:after {
- content: close-quote;
- white-space: nowrap;}
+ content: '\300D'; }
 body > header {
  position: absolute;
  top: 0;

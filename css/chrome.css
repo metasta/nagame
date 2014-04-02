@@ -141,7 +141,8 @@ figure {
  right: 1em;
  bottom: 1em; }
 #content figure.photoset {
- display: table; }
+ display: table;
+ height: 26em; }
 #cotent figure.photoset img {
  display: table-cell;
  vertical-align: middle; }

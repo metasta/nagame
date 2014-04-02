@@ -132,6 +132,7 @@ figure {
 }
 */
 #content .img {
+ height: 100%;
  background-repeat: no-repeat;
  background-position: center center;
  background-size: contain; }
@@ -150,7 +151,6 @@ figure {
  height: 26em; }
 #content .photoset .img {
  display: table-cell;
- height: 100%;
  vertical-align: middle; }
 #content .quote blockquote {
  margin: 2em 1em 0 1em; }

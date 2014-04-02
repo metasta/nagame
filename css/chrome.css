@@ -92,7 +92,8 @@ figure {
 #content .quote,
 #content .link,
 #content .chat {
- margin: 0 0 0 7.6rem; }
+ margin: 0 0 0 5.7rem;
+ padding: 0 0 0 1.9rem; }
 #content .photo {
  width: 720px;
  height: 26em;

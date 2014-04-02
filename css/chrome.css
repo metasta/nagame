@@ -140,6 +140,11 @@ figure {
  position: absolute;
  right: 1em;
  bottom: 1em; }
+#content .quote blockquote {
+ margin: 2em 1em 0 1em; }
+#content .quote .source {
+ text-align: right;
+ font-size: .85em; }
 #content .chat ol {
  list-style-type: none; }
 #content .chat li {

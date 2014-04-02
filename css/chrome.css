@@ -134,7 +134,8 @@ figure {
  background-position: center center;
  background-size: contain;
  position: relative; }
-#content figure .html_photoset {
+#content figure .html_photoset,
+#content figure .html_photoset iframe {
  max-width: 100% !important;
  max-height: 100% !important;
 }

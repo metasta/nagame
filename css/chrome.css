@@ -118,7 +118,7 @@ figure {
  position: relative; }
 #content figure img {
  display: none; }
-#content figure iframe {
+#content figure .html_photoset {
  margin: 0 auto; }
 #content figcaption {
  color: #fff;

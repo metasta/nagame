@@ -71,6 +71,9 @@ article p:after {
 article img {
  max-width: 700px;
  max-height: 26em; }
+article.chat {
+ quotes: "\300C" "\300D" "\300E" "\300F";
+}
 article.chat ol {
  list-style-type: none;
  margin-top: 2em; }
@@ -79,9 +82,9 @@ article.chat li {
 article.chat .name {
  font-weight: bold; }
 article.chat .line:before {
- content: "\300C"; }
+ content: open-quote; }
 article.chat .line:after {
- content: "\300D"; }
+ content: close-quote; }
 body > header {
  position: absolute;
  top: 0;

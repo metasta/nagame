@@ -64,7 +64,8 @@ a:hover,a:active {
  color: #222; }
 article p {
  margin: 0;
- display: inline; }
+ display: inline;
+ text-indent: 1em; }
 article p:after {
  content: "\A";
  white-space: pre; }

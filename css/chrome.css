@@ -134,22 +134,19 @@ figure {
  display: table-cell;
  vertical-align: middle; }
 #content .quote blockquote {
- margin: 2em 1em 0 1em; }
-#content .quote .source {
+ margin: 2em 1.9rem 0 1.9rem; }
+#content .quote .source,
+#content .link .source {
  display: block;
  text-align: right;
  font-size: .85rem;
- margin-top: 4em; }
+ margin: 4em 1.9rem 0 1.9rem; }
 #content .quote .source:before {
  content: '\FF08'; }
 #content .quote .source:after {
  content: '\FF09'; }
 #content .link .host {
  font-size: .8rem; }
-#content .link .source {
- display: block;
- text-align: right;
- font-size: .85rem; }
 #content .chat ol {
  list-style-type: none; }
 #content .chat li {

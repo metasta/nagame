@@ -92,7 +92,8 @@ figure {
 #content .text,
 #content .quote,
 #content .link,
-#content .chat { }
+#content .chat {
+ margin: 0 0 0 7.6rem; }
 #content .photo,
 #content .audio,
 #content .video {

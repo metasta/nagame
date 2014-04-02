@@ -108,6 +108,8 @@ figure {
  -webkit-column-break-after: always; }
 #content figure {
  position: relative; }
+#content figure img {
+ display: none; }
 #content figcaption {
  color: #eee;
  font-size: .8em;

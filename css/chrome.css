@@ -141,12 +141,12 @@ figure {
  position: absolute;
  right: 1em;
  bottom: 1em; }
-#content figure.photoset {
+#content .photoset {
  display: table;
  table-layout: fixed;
  width: 100%;
  height: 26em; }
-#cotent figure.photoset .img {
+#content .photoset .img {
  display: table-cell;
  height: 100%;
  vertical-align: middle; }

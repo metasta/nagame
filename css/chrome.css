@@ -83,11 +83,11 @@ figure {
  max-height: 600px; }
 #content {
  width: 720px;
+ height: 26em;
  -webkit-writing-mode: vertical-rl;
  -webkit-column-width: 26em;
  -webkit-column-gap: 3em; }
-#content article {
- height: 26em; }
+#content article { }
 #content .text,
 #content .quote,
 #content .link,

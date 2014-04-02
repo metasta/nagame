@@ -62,6 +62,10 @@ a:link,a:visited {
  transition: all .25s ease-in-out; }
 a:hover,a:active {
  color: #222; }
+figure {
+ margin: 0;
+ padding: 1em;
+}
 #header {
  position: absolute;
  top: 0;

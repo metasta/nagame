@@ -134,13 +134,10 @@ figure {
  background-position: center center;
  background-size: contain;
  position: relative; }
-#content figure .media-frame {
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- padding: 1px; }
+#content figure .html_photoset {
+ max-width: 100% !important;
+ max-height: 100% !important;
+}
 #content figure figcaption {
  color: #fff;
  font-size: .8em;

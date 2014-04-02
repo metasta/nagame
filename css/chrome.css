@@ -78,6 +78,10 @@ article.chat li {
  text-indent: -2em; }
 article.chat .name {
  font-weight: bold; }
+article.chat .line:before {
+ content: "\300C"; }
+article.chat .line:after {
+ content: "\300D"; }
 body > header {
  position: absolute;
  top: 0;

@@ -74,7 +74,7 @@ article .img {
  width: 700px;
  height: 100%;
  background-position: center center;
- background-size: cover; }
+ background-size: contain; }
 article.chat ol {
  list-style-type: none;
  margin-top: 2em; }

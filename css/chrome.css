@@ -95,8 +95,7 @@ figure {
  margin: 0 0 0 7.6rem; }
 #content .photo,
 #content .audio,
-#content .video {
- width: 100%; }
+#content .video { }
 #content p {
  margin: 0;
  display: inline; }
@@ -124,7 +123,7 @@ figure {
  position: relative; }
 */
 #content figure {
- width: 100%;
+ width: 720px;
  height: 26em;
  background-color: #000;
  background-repeat: no-repeat;

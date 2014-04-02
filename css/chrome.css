@@ -117,6 +117,8 @@ figure {
  position: relative; }
 #content figure img {
  display: none; }
+#content figure iframe {
+ margin: 0 auto; }
 #content figcaption {
  color: #fff;
  font-size: .8em;

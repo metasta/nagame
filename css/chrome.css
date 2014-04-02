@@ -104,8 +104,7 @@ figure {
  background-repeat: no-repeat;
  background-position: center center;
  background-size: contain;
- -webkit-column-break-before: always;
- -webkit-column-break-after: always; }
+ -webkit-column-break-inside: avoid; }
 #content figure {
  position: relative; }
 #content figure img {

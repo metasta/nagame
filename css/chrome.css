@@ -121,7 +121,8 @@ img {
  text-align: center;
  vertical-align: middle; }
 #content figure img {
- display: block; }
+ display: block;
+ margin: 0 auto; }
 /*
 #content figure img {
  display: none; }

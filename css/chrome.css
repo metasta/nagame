@@ -99,6 +99,10 @@ figure {
  -webkit-column-gap: 3em;
  -webkit-column-break-before: always;
  -webkit-column-break-after: always; }
+#content .photo,
+#content .audio,
+#content .video {
+ margin 3em 0; }
 #content p {
  margin: 0;
  display: inline; }

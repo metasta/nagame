@@ -1,0 +1,112 @@
+@charset "utf-8";
+@font-face {
+ font-family: Asebi;
+ src: local('Asebi Mincho Regular'),
+      local('AsebiMin-Regular'),
+      url('https://metasta.github.io/asebi/AsebiMin-Regular.woff') format('woff'),
+      url('https://metasta.github.io/asebi/AsebiMin-Regular.otf') format('opentype'); }
+@font-face {
+ font-family: Yu;
+ src: local(YuMincho), local('游明朝'); }
+@font-face {
+ font-family: Hiragino;
+ src: local('Hiragino Mincho ProN');
+}
+@font-face {
+ font-family: Palatino;
+ src: local('Palatino'), local('Palatino Linotype');
+}
+body {
+ width: 980px;
+ margin: 5em auto;
+ font-size: 12pt;
+ line-height: 1.9;
+ font-family: Yu,serif;
+ text-align: justify;
+ color: #222;
+ text-shadow: 0 0 1px rgba(0,0,0,.2);
+ position: relative; }
+h1,h2,h3,h4,h5,h6 {
+ font-weight: normal;
+ line-height: 1.9rem; }
+h1 {
+ font-weight: bold;
+ font-size: 160%;
+ /* 1.9 [rem/line] x (4 - 1) [lines] = 5.7 [rem] */
+ margin: 4rem 2.85rem 0 2.85rem; }
+h2 {
+ font-weight: bold;
+ font-size: 135%;
+ /* 1.9 [rem/line] x (3 - 1) [lines] = 3.8 [rem] */
+ margin: 6rem 1.9rem 0 1.9rem; }
+h3 {
+ font-size: 115%;
+ /* 1.9 [rem/line] x (2 - 1) [lines] = 1.9 [rem] */
+ margin: 8rem 0.95rem 0 0.95rem; }
+h4,h5,h6 {
+ font-size: 100%;
+ /* 1.9 [rem/line] x (2 - 1) [lines] = 1.9 [rem] */
+ margin: 10rem 0.95rem 0 0.95rem; }
+h1 a:link,
+h1 a:visited {
+  color: #222; }
+article {
+ margin: 0 0 0 1.9rem; }
+hr {
+ border: 0;
+ height: 1px;
+ background: -webkit-linear-gradient(left, rgba(0,0,0,0),rgba(0,0,0,.75),rgba(0,0,0,0)); }
+p {
+ margin: 0;
+ display: inline; }
+p:after {
+ content: "\A";
+ white-space: pre; }
+a:link,a:visited {
+ text-decoration: none;
+ color: #752;
+ transition: all .25s ease-in-out; }
+a:hover,a:active {
+ color: #222; }
+body > header {
+ position: absolute;
+ top: 0;
+ right: 0;
+ width: 200px;
+ height: 1280px; }
+body > header > h1 {
+ -webkit-writing-mode: vertical-rl;
+ font-size: 300%;
+ font-weight: bold;
+ margin: 1em auto;
+ white-space: nowrap; }
+body > header > p {
+ -webkit-writing-mode: vertical-rl;
+ margin: 0 auto;
+ display: block;
+ height: 600px; }
+footer {
+ -webkit-column-break-before: always;
+ -webkit-writing-mode: horizontal-tb;
+ width: 100%;
+ font-family: Palatino,serif;
+ text-align: center;
+ position: relative; }
+a[rel="next"] {
+ position: absolute;
+ left: 0; }
+a[rel="next"]:before {
+ content: "\2190\A0"; }
+a[rel="prev"] {
+ position: absolute;
+ right: 0; }
+a[rel="prev"]:after {
+ content: "\A0\2192"; }
+#content {
+ width: 720px;
+ height: 26em;
+ -webkit-writing-mode: vertical-rl;
+ -webkit-column-width: 26em;
+ -webkit-column-gap: 3em; }
+.m {
+ font-family: Yu,serif; }

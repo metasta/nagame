@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>たてがき</title>
+<script src="https://metasta.github.io/nagame/js/conditionizr.min.js"></script>
+<script src="https://metasta.github.io/nagame/js/chrome.js"></script>
+<script>
+conditionizr.config({
+ assets: 'https://metasta.github.io/nagame/css/',
+ tests : {
+  chrome : ['style']
+ }
+});
+</script>
+<header>
+<h1 title="長雨"><a href="/">長雨</a></h1>
+<p class="description">Nagame: A vertical-writing theme for tumblr</p>
+</header>
+<div id="content">
+<main class="autopagerize_page_element">
+<article class="post text">
+<h1><a href="">Text テキスト</a></h1>
+<p>　通常のテキストによる投稿のプレビュー。</p>
+<p>　太字・イタリック・URL・画像の挿入に対応するのが目標。</p>
+</article>
+<article class="post photo">
+<p>　Photo 画像</p>
+<p>　一枚の画像による投稿のプレビュー。</p>
+<p>　画像とキャプションテキストの表示に対応するのが目標。</p>
+</article>
+<article class="post panorama">
+<p>　Panorama パノラマ</p>
+<p>　3:1 以上、横幅1000px以上の高解像度ワイド画像は「パノラマ」になる。</p>
+<p>　画像とキャプションテキストの表示に対応するのが目標。</p>
+</article>
+<article class="post photoset">
+<p>　Photoset フォトセット</p>
+<p>　複数枚の画像は「フォトセット」になる。</p>
+<p>　画像とキャプションテキストの表示に対応するのが目標。</p>
+</article>
+<article class="post quote">
+<blockquote>
+<p>　Quote 引用</p>
+<p>　引用文と出典の表示に対応するのが目標。</p>
+</blockquote>
+</article>
+<article class="post link">
+<p>　<a href="">Link リンク</a></p>
+<p>　リンクと説明文の表示に対応するのが目標。</p>
+</article>
+<article class="post chat">
+<h1><a href="">Chat チャット</a></h1>
+<ol>
+<li>A: タイトルと
+<li>B: 会話文を
+<li>C: ちくわ大明神
+<li>A: 表示するのが目標
+</ol>
+</article>
+<article class="post audio">
+<p>　Audio 音声</p>
+<p>　SoundCloud で検索するか、mp3ファイルをアップロードするか、外部ファイルのURLを張るかの3通り。</p>
+<p>　それぞれ「プレーヤ」「ID3タグ情報」「URL」を表示するのが目標。</p>
+<p>　さらに、どの形式でもキャプションをつけることができる。</p>
+</article>
+<article class="post video">
+<p>　Video 動画</p>
+<p>　URLを張るか、直接アップロードする。</p>
+<p>　埋め込み画面とキャプションを用意するのが目標。</p>
+</article>
+<article class="post answer">
+<p>　Answer</p>
+<p>　他人の投稿に対する回答。</p>
+<p>　質問となる投稿をした人の名前、質問、回答者の名前、回答を表示。</p>
+</article>
+<p>　その他、日付、Notes (リブログされた・likes がついた・または answer された記録の表示)、タグ、出典表示、投稿日別ページ、タグ別ページ、likeボタン、リブログボタンに対応せねば。</p>
+</main>
+<footer>
+<hr/>
+ <nav id="pagination">
+  <a href="{NextPage}" rel="next">Older</a>
+  <span>1 / 3</span>
+  <a href="{PreviousPage}" rel="prev">Newer</a>
+ </nav>
+</footer>
+</div>

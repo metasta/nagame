@@ -80,6 +80,7 @@ figure {
  -webkit-writing-mode: vertical-rl;
  margin: 0 auto;
  display: block;
+ min-height: 300px;
  max-height: 600px; }
 #content {
  width: 720px;

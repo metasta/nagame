@@ -96,7 +96,9 @@ figure {
  height: 26em;
  -webkit-writing-mode: vertical-rl;
  -webkit-column-width: 26em;
- -webkit-column-gap: 3em; }
+ -webkit-column-gap: 3em;
+ -webkit-column-break-before: always;
+ -webkit-column-break-after: always; }
 #content p {
  margin: 0;
  display: inline; }

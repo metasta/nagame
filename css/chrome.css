@@ -71,6 +71,13 @@ article p:after {
 article img {
  max-width: 700px;
  max-height: 26em; }
+article.chat ol {
+ list-style-type: none;
+ margin-top: 2em; }
+article.chat li {
+ text-indent: -2em; }
+article.chat .name {
+ font-weight: bold; }
 body > header {
  position: absolute;
  top: 0;

@@ -110,27 +110,6 @@ figure {
 #content p:after {
  content: '\A';
  white-space: pre; }
-/*
-#content figure {
- width: 100%;
- height: 100%;
- background-color: #000;
- display: table-cell;
- text-align: center;
- vertical-align: middle; }
-#content figure img {
- display: block;
- margin: 0 auto; }
-#content figure img {
- display: none; }
-#content figure {
- width: 100%;
- height: 100%;
- position: relative; }
-#content figure {
- position: relative;
-}
-*/
 #content .img {
  height: 100%;
  background-repeat: no-repeat;
@@ -163,6 +142,8 @@ figure {
  content: '\FF08'; }
 #content .quote .source:after {
  content: '\FF09'; }
+#content .link {
+ text-align: center; }
 #content .chat ol {
  list-style-type: none; }
 #content .chat li {

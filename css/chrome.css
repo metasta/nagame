@@ -84,14 +84,15 @@ figure {
  max-height: 600px; }
 #content {
  width: 720px;
- height: 26em;
+/* height: 26em;
  -webkit-writing-mode: vertical-rl;
  -webkit-column-width: 26em;
- -webkit-column-gap: 3em; }
+ -webkit-column-gap: 3em; */}
 #content .text,
 #content .quote,
 #content .link,
 #content .chat {
+ -webkit-writing-mode: vertical-rl;
  margin:0 0 0 7.6em; }
 #content p {
  margin: 0;
@@ -108,7 +109,7 @@ figure {
  background-repeat: no-repeat;
  background-position: center center;
  background-size: contain;
- -webkit-column-break-inside: avoid; }
+/* -webkit-column-break-inside: avoid; */}
 #content figure {
  position: relative; }
 #content figure img {
@@ -134,8 +135,8 @@ figure {
 #content .chat .line:after {
  content: '\300D'; }
 footer {
- -webkit-column-break-inside: avoid;
- -webkit-writing-mode: horizontal-tb;
+/* -webkit-column-break-inside: avoid;
+ -webkit-writing-mode: horizontal-tb; */
  width: 100%;
  height: 13em;
  position: relative; }

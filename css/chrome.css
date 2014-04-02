@@ -140,19 +140,22 @@ figure {
  position: absolute;
  right: 1em;
  bottom: 1em; }
+#content figure.photoset {
+ display: table; }
+#cotent figure.photoset img {
+ display: table-cell;
+ vertical-align: middle; }
 #content .quote blockquote {
  margin: 2em 1em 0 1em; }
 #content .quote .source {
  display: block;
  text-align: right;
  font-size: .85em;
- margin-top: 4em;}
+ margin-top: 4em; }
 #content .quote .source:before {
- content: '\FF08';
-}
+ content: '\FF08'; }
 #content .quote .source:after {
- content: '\FF09';
-}
+ content: '\FF09'; }
 #content .chat ol {
  list-style-type: none; }
 #content .chat li {

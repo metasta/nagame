@@ -148,6 +148,7 @@ figure {
  height: 26em; }
 #cotent figure.photoset .img {
  display: table-cell;
+ height: 100%;
  vertical-align: middle; }
 #content .quote blockquote {
  margin: 2em 1em 0 1em; }

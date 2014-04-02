@@ -145,7 +145,8 @@ figure {
 #content .quote .source {
  display: block;
  text-align: right;
- font-size: .85em; }
+ font-size: .85em;
+ margin-top: 4em;}
 #content .quote .source:before {
  content: '\FF08';
 }

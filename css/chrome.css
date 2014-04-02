@@ -105,7 +105,8 @@ a:hover,a:active {
 #content figure {
  position: relative; }
 #content figcaption {
- color: #fff;
+ color: #eee;
+ font-size: .9em;
  text-shadow: 0 0 10px rgba(0,0,0,.8);
  text-align: right;
  position: absolute;

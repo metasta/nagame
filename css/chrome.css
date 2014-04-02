@@ -142,6 +142,8 @@ figure {
  bottom: 1em; }
 #content figure.photoset {
  display: table;
+ table-layout: fixed;
+ width: 100%;
  height: 26em; }
 #cotent figure.photoset img {
  display: table-cell;

@@ -70,9 +70,11 @@ article p:before {
 article p:after {
  content: '\A';
  white-space: pre; }
-article img {
- max-width: 700px;
- max-height: 26em; }
+article .img {
+ width: 700px;
+ height: 100%;
+ background-position: center center;
+ background-size: cover; }
 article.chat ol {
  list-style-type: none;
  margin-top: 2em; }

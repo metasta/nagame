@@ -56,20 +56,20 @@ h4,h5,h6 {
 h1 a:link,
 h1 a:visited {
   color: #222; }
-p {
- margin: 0;
- display: inline; }
-p:before {
- content: "\3000"; }
-p:after {
- content: "\A";
- white-space: pre; }
 a:link,a:visited {
  text-decoration: none;
  color: #752;
  transition: all .25s ease-in-out; }
 a:hover,a:active {
  color: #222; }
+article p {
+ margin: 0;
+ display: inline; }
+article p:before {
+ content: "\3000"; }
+article p:after {
+ content: "\A";
+ white-space: pre; }
 body > header {
  position: absolute;
  top: 0;

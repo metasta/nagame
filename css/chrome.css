@@ -71,7 +71,7 @@ figure {
  max-height: 1280px; }
 #header > h1 {
  -webkit-writing-mode: vertical-rl;
- font-size: 300%;
+ font-size: 3rem;
  font-weight: bold;
  margin: 1em auto;
  white-space: nowrap; }

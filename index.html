@@ -112,6 +112,7 @@ article:not(.quote) figure {
 article:not(.quote) figcaption {
  -webkit-writing-mode: vertical-rl;
  position: absolute;
+ text-align: right;
  left: 1em;
  bottom: 1em;
  color: #fff;
@@ -152,8 +153,9 @@ article.link figure > a {
  text-shadow: 0 0 1px rgba(255,255,255,.2);}
 article.link figure > a:hover,
 article.link figure > a:active {
- color: #fff;
- background: #222;}
+ color: #222;
+ background: #fff;
+ text-shadow: 0 0 1px rgba(0,0,0,.2);}
 article.link figure > a:after {
  content: ' >';}
 article.chat ol {
@@ -189,7 +191,14 @@ footer .copyright {
  margin: 0 1em;
  color: #777;
  font-size: .8em;}
-.modern {
+.oldfont,
+.trad,
+.classical,
+.kyuji {
+ font-family: Asebi,serif;}
+.newfont,
+.modern,
+.shinji {
  font-family: serif;}
 </style>
 <header>

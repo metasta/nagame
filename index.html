@@ -230,12 +230,13 @@ footer .copyright {
  <article id="post-oldfont" class="text oldfont">
   <h1>旧字</h1>
   <p>
-　「長雨」は、旧字明朝体の日本語環境を提案します。<br/>
-　テーマカスタマイズ画面から、旧字 Web フォント「馬酔木明朝」を使用するかどうか選ぶことができます。<br/>
-　また、テーマカスタマイズの設定とは別に、任意の文字の新字／旧字表示を選ぶこともできます。<br/>
-　投稿全体の新字／旧字表示を指定するには、投稿に <tt>#newfont</tt>／<tt>#oldfont</tt> タグをつけてください。<br/>
-　文章全体は旧字のまま、<tt>&lt;span class="newfont"&gt;</tt><span class="newfont">囲った一部だけを新字にする</span><tt>&lt;/span&gt;</tt>ことも簡単にできます。</blockquote>
-  </p>
+　「長雨」では三種類の方法で新字と旧字を使ひ分けることができます。
+　</p>
+　<ol>
+　 <li>テーマ全体の設定。テーマの編集画面からフォントを選択できます。
+　 <li>投稿ごとの設定。投稿に <tt>#newfont</tt> あるいは <tt>#oldfont</tt> とタグをつけるとフォントを変更できます。
+　 <li>文章内の任意の語句に対する設定。フォントを変更したい箇所を<tt>&lt;span class="newfont"&gt;</tt><span class="newfont">このように<tt>span</tt>要素でマークアップしてください。</span><tt>&lt;/span&gt;</tt>
+　</ol>
  </article>
  <script>adjHeight('post-oldfont')</script>
 

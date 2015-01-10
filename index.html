@@ -67,18 +67,20 @@ a:hover,a:active {
 ul,ol {
  margin: 0;}
 ul {
- padding-top: 1em;
+ padding-top: 2em;
  list-style-type: none;}
 ul > li {
- text-indent: -1em;}
+ text-indent: -2em;}
 ul > li:before {
  content: '\2022';} /* bullet */
 ol {
+ padding-top: 2em;
  counter-reset: ol;
  list-style-type: none;}
 ol > li:before {
+ text-indent: -2em;
  counter-increment: ol;
- content: counter(ol, cjk-ideographic);}
+ content: counter(ol, cjk-ideographic) "　";}
 tt {
  font-size: .85rem;}
 h1 a:link,

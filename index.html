@@ -65,10 +65,15 @@ a:link,a:visited {
 a:hover,a:active {
  color: #222;}
 ul,ol {
- margin: 0;
- padding-top: 2em;
- text-indent: -2em;
+ margin: 0;}
+ul {
+ padding-top: 1em;
  list-style-type: none;}
+ul > li:before {
+ content: '\2022';} /* bullet */
+ol {
+ padding-top: 2em;
+ list-style-type: cjk-ideographic;}
 tt {
  font-size: .85rem;}
 h1 a:link,

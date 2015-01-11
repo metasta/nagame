@@ -1,0 +1,203 @@
+@charset 'utf-8';
+@font-face {
+ font-family: 'YuMin';
+ src: local('游明朝'), local('YuMincho');}
+html {
+ font: normal 12pt/1.9 Asebi,YuMin,serif;}
+body {
+ width: 980px;
+ margin: 5em auto;
+ text-align: justify;
+ letter-spacing: -.2pt;
+ text-shadow: 0 0 1px rgba(0,0,0,.4);
+ position: relative;
+ transition: all .3s linear;}
+article {
+ margin-top: 3em;
+ width: 722px;
+ height: 36em;}
+figure {
+ margin: 0;
+ padding: 0;}
+h1,h2,h3,h4,h5,h6 {
+ font-weight: normal;
+ line-height: 1.9rem;}
+h1 {
+ font-weight: bold;
+ font-size: 1.6rem;
+ /* 1.9 [rem/line] x (4 - 1) [lines] = 5.7 [rem] */
+ margin: 4rem 2.85rem 0 2.85rem;}
+h2 {
+ font-weight: bold;
+ font-size: 1.35rem;
+ /* 1.9 [rem/line] x (3 - 1) [lines] = 3.8 [rem] */
+ margin: 6rem 1.9rem 0 1.9rem;}
+h3 {
+ font-size: 1.15rem;
+ /* 1.9 [rem/line] x (2 - 1) [lines] = 1.9 [rem] */
+ margin: 8rem 0.95rem 0 0.95rem;}
+h4,h5,h6 {
+ font-size: 1rem;
+ /* 1.9 [rem/line] x (2 - 1) [lines] = 1.9 [rem] */
+ margin: 10rem 0.95rem 0 0.95rem;}
+p {
+ margin: 0;
+ display: inline;}
+p:after {
+ content: '\A';
+ white-space: pre;}
+a:link,a:visited {
+ text-decoration: none;
+ color: #752;
+ transition: all .3s linear;}
+a:hover,a:active {
+ color: #222;}
+ul,ol {
+ margin: 0;}
+ol {
+ padding-top: 2em;
+ counter-reset: ol;
+ list-style-type: none;}
+ol > li {
+ text-indent: -2em;}
+ol > li:before {
+ counter-increment: ol;
+ content: counter(ol, cjk-ideographic) "　";}
+tt,code {
+ font-size: .85rem;}
+h1 a:link,
+h1 a:hover,
+h1 a:active,
+h1 a:visited {
+ color: #222;}
+header {
+ position: absolute;
+ top: 0;
+ right: 0;
+ width: 200px;}
+header h1 {
+ -webkit-writing-mode: vertical-rl;
+ margin: 1em auto;
+ font-size: 3rem;
+ font-weight: bold;
+ white-space: nowrap;}
+header p {
+ -webkit-writing-mode: vertical-rl;
+ display: block;
+ margin: 0 auto;
+ height: 40em;}
+article.text,
+article.quote,
+article.chat {
+ -webkit-writing-mode: vertical-rl;
+ -webkit-column-width: 36em;
+ -webkit-column-gap: 3em;}
+article.photo,
+article.shortquote,
+article.mediumquote,
+article.link,
+article.audio,
+article.video {
+ display: table;}
+article:not(.longquote) figure {
+ display: table-cell;
+ vertical-align: middle;}
+article:not(.quote) figure {
+ text-align: center;
+ background-color: #222;
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: contain;
+ border-radius: 6px;
+ position: relative;}
+article:not(.quote) figcaption {
+ -webkit-writing-mode: vertical-rl;
+ position: absolute;
+ text-align: right;
+ left: 1em;
+ bottom: 1em;
+ color: #fff;
+ font-size: .84rem;
+ text-shadow: 0 0 4px rgba(0,0,0,1), 0 0 1px rgba(0,0,0,1);}
+article:not(.quote) figcaption a:link,
+article:not(.quote) figcaption a:hover,
+article:not(.quote) figcaption a:active,
+article:not(.quote) figcaption a:visited {
+ color: #fff;}
+article figure > a {
+ display: block;
+ width: 100%;
+ height: 100%;}
+article figure > a > img {
+ display: none;}
+article.quote blockquote {
+ margin: 2em 1.9rem 0 0;}
+article.quote figcaption {
+ margin: 4em 0 0 1.9rem;
+ text-align: right;
+ font-size: .84rem;
+ line-height: 1.9rem;}
+article.quote figcaption:before {
+ content: '\FF08';}
+article.quote figcaption:after {
+ content: '\FF09';}
+article.link figure {
+ border: 1px solid #222;}
+article.link figure > a {
+ box-sizing: border-box;
+ width: auto;
+ height: auto;
+ padding: 2em;
+ color: #fff;
+ background: #222;
+ font-size: 1.35rem;
+ text-shadow: 0 0 1px rgba(255,255,255,.2);}
+article.link figure > a:hover,
+article.link figure > a:active {
+ color: #222;
+ background: #fff;
+ text-shadow: 0 0 1px rgba(0,0,0,.2);}
+article.link figure > a:after {
+ content: ' >';}
+article.chat li {
+ text-indent: -2em;}
+article.chat li:before {
+ content: none;}
+article.chat li .line:before {
+ content: '\300C';}
+article.chat li .line:after {
+ content: '\300D';}
+footer {
+ width: 720px; /* the same as article */
+ margin-top: 2em;}
+footer hr {
+ border: 0;
+ height: 1px;
+ background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.75), rgba(0,0,0,0));}
+footer nav {
+ font-family: Palatino,'Palatino Linotype',serif;
+ text-align: center;
+ position: relative;}
+footer nav .next {
+ position: absolute;
+ left: 0;}
+footer nav .next:before {
+ content: '\2190\A0';}
+footer nav .prev {
+ position: absolute;
+ right: 0;}
+footer nav .prev:after {
+ content: '\A0\2192';}
+footer .copyright {
+ margin: 0 1em;
+ color: #777;
+ font-size: .8em;}
+.oldfont,
+.trad,
+.classical,
+.kyuji {
+ font-family: Asebi,YuMin,serif;}
+.newfont,
+.modern,
+.shinji {
+ font-family: YuMin,serif;}

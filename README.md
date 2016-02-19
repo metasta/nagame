@@ -65,6 +65,6 @@ tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Ch
 ### *2016.02.19*
  - 追加: IE10+, Edge に対応
  - プロジェクトを GitHubGist から GitHub へ移動
- - パノラマのlightbox読み込み時に表示が崩れる問題を修正
+ - パノラマの lightbox 読み込み時に表示が崩れる問題を修正
 
-さらに以前の更新履歴は [GitHubGistの旧ページ](https://gist.github.com/metasta/5986308)で
+さらに以前の更新履歴は [GitHubGist の旧ページ](https://gist.github.com/metasta/5986308)で

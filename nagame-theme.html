@@ -85,15 +85,20 @@ body {
  display: flex;
  flex-direction: column;
  height:100%;
- width:960px;
  margin:0 auto 5em auto;
 }
 #menu,
 #footer {
  flex:none;
 }
+#menu {
+ width: 960px;
+ margin: 0 auto;
+}
 #container {
  flex: 1 0 auto;
+ width:960px;
+ margin: 0 auto;
  display:flex;
  flex-direction: row-reverse;
 }
@@ -152,7 +157,7 @@ aside {
 }
 #footer {
  width: 702px; /* the same as article */
- margin-left: 129px; /* the same as aside */
+ margin: 2em auto;
 }
 article.t__block {
  min-height: {select:LineLength};
@@ -491,6 +496,7 @@ aside .t__permalink:empty:before {
 /* content:'{lang:Permalink for this post}'; */
  content:'無題';
 }
+aside .t__time {white-space: nowrap;}
 aside .t__time:before {content:'（'}
 aside .t__time:after {content:'）'}
 aside .t__list {
@@ -512,9 +518,6 @@ aside .t__list.buttons > li:hover {
 }
 .t__permalink * {
  display:inline;
-}
-#footer {
- margin-top: 2em;
 }
 #footer hr {
  border: 0;

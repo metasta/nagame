@@ -45,11 +45,11 @@ tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Ch
 
 - tumblr の投稿には html タグを記述できるため、以下の記法でルビをふることができる。
 
-             <ruby>縦<rt>たて</rt>書<rt>が</rt></ruby>き
-             <ruby>紫陽花<rt>あぢさゐ</rt></ruby>
+             <ruby>縦<rt>たて</ruby><ruby>書<rt>が</ruby>き
+             <ruby>紫陽花<rt>あぢさゐ</ruby>
 
- <ruby>縦<rt>たて</rt>書<rt>が</rt></ruby>き
- <ruby>紫陽花<rt>あぢさゐ</rt></ruby>
+ <ruby>縦<rt>たて</ruby><ruby>書<rt>が</ruby>き
+ <ruby>紫陽花<rt>あぢさゐ</ruby>
 
 ### その他
 

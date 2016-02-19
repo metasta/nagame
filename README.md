@@ -12,7 +12,7 @@ tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Ch
 
 ## 使用法
 
- 1. nagame-theme.html の内容を全選択・コピーする
+ 1. [nagame-theme.html](https://github.com/metasta/nagame/blob/master/nagame-theme.html) の内容を全選択・コピーする
  2. tumblr のテーマカスタマイズ画面を開き「html を編集」をクリック
  3. 元の html を消去して nagame-theme.html をペースト
 

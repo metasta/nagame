@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="color:Text" content="#222">
+<meta name="select:Font" content="YuMin,serif" title="YuMin">
+<meta name="select:Font" content="Asebi,YuMin,serif" title="Asebi">
+<meta name="select:LineLength" content="26rem" title="26">
+<meta name="select:LineLength" content="28rem" title="28">
+<meta name="select:LineLength" content="30rem" title="30">
+<meta name="select:LineLength" content="32rem" title="32">
+<meta name="select:LineLength" content="34rem" title="34">
+<meta name="select:LineLength" content="36rem" title="36">
+<meta name="select:LineLength" content="38rem" title="38">
+<meta name="select:LineLength" content="40rem" title="40">
+<meta name="select:LineLength" content="42rem" title="42">
+<meta name="select:LineLength" content="44rem" title="44">
+<title>{block:PostSummary}{PostSummary} | {/block:PostSummary}{block:DayPage}{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} | {/block:DayPage}{block:TagPage}{lang:Tagged with}{Tag} | {/block:TagPage}{block:SearchPage}{lang:SearchResultCount results for SearchQuery}{block:NoSearchResults}{lang:No posts containing SearchQuery}{/block:NoSearchResults} | {/block:SearchPage}{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<link href="https://ss1.xrea.com/metasta.s602.xrea.com/Asebi.css" id="webfont"><!-- delay loading -->
+<link href="https://ss1.xrea.com/metasta.s602.xrea.com/EmojiSymbols.css" rel="stylesheet"><!-- not delay -->
+{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+<script>
+function adjHeights(t){
+ var l = document.getElementsByTagName(t);
+ for(var i = 0; i < l.length; i++){
+  l[i].style.height = l[i].scrollHeight + 'px';
+ }
+}
+function printDate(id){
+ var e = document.getElementById(id);
+ var s = e.getAttribute('data-time').split('-');
+ e.innerHTML = n2k(s[0])+'年'+n2k_num(s[1])+'月'+n2k_num(s[2])+'日';
+}
+function n2k(n){
+ var a = new Array('〇','一','二','三','四','五','六','七','八','九');
+ var r = '';
+ for(var i=0;i<n.length;i++){r += a[parseInt(n.charAt(i),10)];}
+ return r;
+}
+function n2k_num(n){ /* '01' - '99' */
+ var a = new Array('〇','一','二','三','四','五','六','七','八','九');
+ var i = parseInt(n.charAt(0),10);
+ var j = parseInt(n.charAt(1),10);
+ return ((i>1)?a[i]:'')+((i>0)?'十':'')+((j>0)?a[j]:'');
+}
+function adjPagination(){
+ var f = document.getElementsByClassName('page_first');
+ if (document.getElementsByClassName('page_1').length){
+  for(var i = 0; i < f.length; i++){
+   f[i].style.display = 'none';
+  }
+ }
+ var l = document.getElementsByClassName('page_last');
+ if (document.getElementsByClassName('page_{TotalPages}').length){
+  for(var i = 0; i < l.length; i++){
+   l[i].style.display = 'none';
+  }
+ }
+}
+</script>
+<style>
+@charset 'utf-8';
+@font-face {
+ font-family: 'YuMin';
+ src: local('游明朝'), local('游明朝体'),
+      local('YuMincho'), local('Yu Mincho');}
+@font-face {
+ font-family: 'YuGo';
+ src: local('游ゴシック'), local('游ゴシック体'),
+      local('YuGothic'), local('Yu Gothic');}
+ 
+/* Arrangement */
+.t__title,
+.t__description,
+article.t__text,
+aside {
+         writing-mode: tb-rl; /* IE */
+ -webkit-writing-mode: vertical-rl; /* Safari */
+         writing-mode: vertical-rl;
+}
+body {
+ display: flex;
+ flex-direction: column;
+ height:100%;
+ width:960px;
+ margin:0 auto 5em auto;
+}
+#menu,
+#footer {
+ flex:none;
+}
+#container {
+ flex: 1 0 auto;
+ display:flex;
+ flex-direction: row-reverse;
+}
+#header {
+ flex: none;
+ width:129px;
+ margin: 0 0 1rem 0;
+}
+#header > * {
+ display:block;
+ margin-left: auto; 
+ margin-right: auto;
+}
+/* Firefox */
+@-moz-document url-prefix() {
+ #header {
+  display:table-cell;
+  text-align:center;
+ }
+ #header > .t__description {
+  text-align:left;
+  display:inline;
+ }
+}
+/* IE, Edge */
+_:-ms-lang(x), #header {
+ display:table-cell;
+ text-align:center;
+} 
+_:-ms-lang(x), #header > .t__title {
+ display:inline-block;
+ margin:0;
+}
+_:-ms-lang(x), #header > .t__description {
+ display:inline;
+ text-align:left;
+} 
+
+main {
+ flex: none;
+ width:831px;
+ display:flex;
+ flex-direction:row-reverse;
+ flex-wrap:wrap;
+}
+article {
+ flex:none;
+ height:{select:LineLength}; /* often overridden */
+ width:702px;
+}
+aside {
+ flex:none;
+ height:{select:LineLength};
+ width:129px;
+ align-self:flex-end;
+}
+#footer {
+ width: 702px; /* the same as article */
+ margin-left: 129px; /* the same as aside */
+}
+article.t__block {
+ min-height: {select:LineLength};
+}
+/* Video, Audio centering */
+article.t__block {
+ position:relative;
+}
+article.t__block > * {
+ display:block;
+ position:absolute;
+ left:0; top:0; right:0; bottom:0;
+ margin:auto;
+}
+/* Photoset centering */
+article.t__block {
+ text-align: center;
+}
+/* Photo, Panorama centering */
+article.t__block {
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: contain;
+}
+/* Link centering */
+article.t__link > a {
+ display:table;
+ width: 100%;
+ height:100%;
+}
+article.t__link > a > * {
+ display: table-cell;
+ vertical-align: middle;
+}
+/* Quote centering */
+article.t__shortquote,
+article.t__mediumquote {
+         writing-mode: lr-tb; /* IE */
+ -webkit-writing-mode: horizontal-tb; /* Safari */
+         writing-mode: horizontal-tb;
+}
+article.t__shortquote > blockquote,
+article.t__mediumquote > blockquote {
+         writing-mode: tb-rl; /* IE */
+ -webkit-writing-mode: vertical-rl; /* Safari */
+         writing-mode: vertical-rl;
+ margin: 0 auto;
+}
+/* Firefox */
+@-moz-document url-prefix() {
+ article.t__shortquote,
+ article.t__mediumquote {
+  display:table-cell;
+  text-align:center;
+  border-top: 3em solid rgba(0,0,0,0);
+ }
+ article.t__shortquote > blockquote,
+ article.t__mediumquote > blockquote {
+  text-align:left;
+  display:inline;
+  height: {select:LineLength};
+ }
+}
+/* IE, Edge */
+_:-ms-lang(x), article.t__shortquote,
+               article.t__mediumquote {
+  display:table-cell;
+  text-align:center;
+  border-top: 3em solid rgba(0,0,0,0);
+}
+_:-ms-lang(x), article.t__shortquote > blockquote,
+               article.t__mediumquote > blockquote {
+  text-align:left;
+  display:inline;
+  height: {select:LineLength};
+}
+
+article.t__message {
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}
+
+/* Typesetting - basic rule */
+html {
+ font: normal 12pt/1.9 {select:Font};
+ letter-spacing: -.03em;
+ text-align: justify;
+ text-shadow: 0 0 .1em rgba(0,0,0,.4);
+ color: {color:Text};
+}
+/* IE, Edge */
+_:-ms-lang(x), html {
+ text-shadow: 0 0 2px rgba(0,0,0,.4);
+}
+a {
+ text-decoration: none;
+ color: #752;
+ transition: color .2s linear;}
+a:hover,a:active {
+ color: {color:Text};}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+ color: {color:Text};
+}
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+ line-height: 1.9rem;
+}
+article h1 {
+ font-size: 1.6rem;
+ font-weight: bold;
+ margin: 4rem 2.85rem 0 2.85rem; /* 1.9 [rem/line] x (4 - 1) [lines] = 5.7 [rem] */
+}
+article h2 {
+ font-size: 1.35rem;
+ font-weight: bold;
+ margin: 6rem 1.9rem 0 1.9rem; /* 1.9 [rem/line] x (3 - 1) [lines] = 3.8 [rem] */
+}
+article h3 {
+ font-size: 1.15rem;
+ font-weight: normal;
+ margin: 8rem 0.95rem 0 0.95rem; /* 1.9 [rem/line] x (2 - 1) [lines] = 1.9 [rem] */
+}
+article h4,
+article h5,
+article h6 {
+ font-size: 1rem;
+ font-weight: normal;
+ margin: 10rem 0.95rem 0 0.95rem; /* 1.9 [rem/line] x (2 - 1) [lines] = 1.9 [rem] */
+}
+article p {
+ display:inline;
+ margin:0;
+}
+article p:after {
+ content: '\A';
+ white-space: pre;
+}
+article ol,
+article ul {
+ margin: 0;
+ list-style-type:none;
+ padding-top:2em;
+}
+article ol {
+ counter-reset:ol;
+}
+article li {
+ text-indent:-2em;
+}
+article ol > li:before {
+ counter-increment: ol;
+ content: counter(ol, cjk-ideographic) "　";
+}
+article ul > li:before {
+    content: "一　"; /* hitotsu */
+}
+article blockquote {
+ margin: 2em 1.9rem 0 1.9rem;
+}
+code,kbd,samp,tt,var {
+ font-family: monospace;
+ font-size: .84rem;
+}
+rt {
+ font-size: 50%;
+ line-height: 0;
+}
+
+/* specific rules */
+#menu,article.t__message,aside,#footer {
+ font: normal 9pt/1.9 YuGo,sans-serif;
+ letter-spacing:0;
+ text-shadow:none;
+ color:#888;
+}
+#menu a,
+aside a,
+#footer a {
+    color: #888;
+}
+#menu a:hover,
+#menu a:active,
+aside a:hover,
+aside a:active,
+#footer .t__copyright a:hover,
+#footer .t__copyright a:active {
+ color: {color:Text};
+}
+#menu {
+ height: 5rem;
+}
+#menu ul {
+ list-style-type: none;
+ margin:0;
+ padding:0 5px;
+}
+#menu li {
+ display:inline-block;
+ height:2rem;
+ line-height:2rem;
+ padding: 0;
+}
+#menu li:after {
+    content: "    |    ";
+    white-space:pre;
+}
+#menu li:last-child:after {
+ content:none;
+}
+#menu form {
+ display:inline-block;
+ position:relative;
+}
+#menu input[type=text] {
+    margin:0;
+    height:20px;
+    border:1px solid #bbb;
+    border-radius:3px;
+    padding-left:5px;
+    padding-right:20px;
+    font-size:9pt;
+    color:#888;
+}
+#menu input[type=submit] {
+ width:20px;
+ height:20px;
+ border:0;
+ background:transparent;
+ cursor:pointer;
+ Font-family:EmojiSymbols;
+ position: absolute;
+ margin: auto;
+ right:0; top:0; bottom:0;
+ color: #bbb;
+ line-height:0;
+ font-size:8pt;
+}
+#menu input:focus {
+ outline:none;
+}
+#menu .arrow {
+ font-size: 6pt;
+}
+.t__title {
+ font-size: 4rem;
+ font-weight: bold;
+ white-space: nowrap;
+ padding-top:4rem;
+ padding-bottom: 4rem;
+}
+.t__avatar {
+ display:block;
+ margin-bottom:3rem;
+}
+.t__avatar.circle {
+ border-radius:50%;
+}
+.t__avatar.square {
+ border-radius:3px;
+}
+.t__description {
+ height: 40em;
+ font-size: .84rem;
+}
+article {
+ margin-top: 3em;
+}
+article.t__text {
+ /* Chrome, Opera */
+ -webkit-column-width: {select:LineLength};
+ -webkit-column-gap: 3em;
+ -webkit-column-fill: auto;
+ /* Firefox */
+ -moz-column-width: {select:LineLength};
+ -moz-column-gap: 3em;
+ -moz-column-fill: auto;
+
+ column-width: {select:LineLength};
+ column-gap: 3em;
+ column-fill: auto;
+}
+article.t__block {
+ border: 1px solid #888;
+ border-radius:3px;
+ box-sizing:border-box;
+}
+article.t__quote .source {
+ margin: 4em 0 0 1.9rem;
+ text-align: right;
+ font-size: .84rem;
+ line-height: 1.9rem;
+}
+article.t__quote .source:before {content: '\FF08'}
+article.t__quote .source:after {content: '\FF09'}
+article.t__chat .item {
+ display:list-item;
+ list-style-type:none;
+ margin-top:1em;
+ text-indent: -1em;
+}
+article.t__link > a {
+ font-family: YuGo,sans-serif;
+ font-size: 1.35rem;
+ color: {color:Text};
+ text-shadow: 0 0 1px {color:Text}, 0 0 5px #fff, 0 0 10px #fff;
+ background: linear-gradient(to bottom, rgba(160,160,160,.5), rgba(255,255,255,.5), rgba(255,255,255,.5));
+}
+article.t__chat .line {quotes: "「" "」" "『" "』"}
+article.t__chat .line:before {content: open-quote}
+article.t__chat .line:after { content:close-quote}
+aside {
+ text-align: right;
+ vertical-align: middle;
+}
+aside .t__pubdata {
+ display: block;
+ font-family: {select:Font};
+ font-size:.84rem;
+ text-shadow: 0 0 .1em rgba(0,0,0,.4);
+ color: {color:Text};
+}
+aside .t__pubdata a {
+ color: {color:Text};
+}
+aside .t__permalink:empty:before {
+/* content:'{lang:Permalink for this post}'; */
+ content:'無題';
+}
+aside .t__time:before {content:'（'}
+aside .t__time:after {content:'）'}
+aside .t__list {
+ display: inline-block;
+ list-style-type:none;
+ padding: 0;
+}
+aside .t__list > li {
+ display: inline-block;
+ padding-top: 1em;
+}
+aside .t__list.buttons > li {
+ line-height:18px;
+ transition: opacity .2s linear;
+ opacity: .5;
+}
+aside .t__list.buttons > li:hover {
+    opacity:1
+}
+.t__permalink * {
+ display:inline;
+}
+#footer {
+ margin-top: 2em;
+}
+#footer hr {
+ border: 0;
+ height: 1px;
+ background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.75), rgba(0,0,0,0));
+}
+#footer nav ul {
+ padding:0;
+ display:flex;
+ flex-direction: row-reverse;
+ justify-content:center;
+ list-style-type:none;
+}
+#footer nav li {
+ flex:none;
+ min-width:1.2rem;
+ height:1.2rem;
+ line-height:1.2rem;
+ margin: 2px;
+ padding: 0;
+ text-align:center;
+ vertical-align: middle;
+}
+#footer nav .current_page,
+#footer nav .jump_page {
+ font-size:8pt;
+}
+#footer nav li.current_page {
+ color: #fff;
+ background: #aaa;
+}
+#footer nav a {
+ display:block;
+ transition:color .2s linear;
+ color: #888;
+}
+#footer nav a:hover {
+ color: #000;
+}
+#footer nav .t__nextprev_page {
+ visibility: hidden;
+ font-size: 6pt;
+}
+#footer .t__copyright {
+ margin: 0 1em;
+}
+ol.notes {
+ flex:none;
+ width: 702px;
+ padding: 20px 60px;
+ list-style:none;
+ font: normal 8pt/1.9 Yugo,sans-serif;
+ text-shadow:none;
+ color: #222;
+ background: #eee;
+ border-radius:3px;
+ box-sizing:border-box;
+ text-align: right;
+}
+ol.notes img {
+ display:none;
+}
+.t__emoji {
+ font-family: EmojiSymbols;
+}
+.oldfont, .trad, .classical, .kyuji {
+ font-family: Asebi,YuMin,serif !important;
+}
+.newfont, .modern, .shinji {
+ font-family: YuMin,serif !important;
+}
+{CustomCSS}
+</style>
+</head>
+<body>
+<nav id="menu">
+ <ul>
+  <li><form action="/search" method="get">
+   <input type="text" name="q" value="{SearchQuery}" placeholder="{Title}"><input type="submit" value="&#x1F50D;"></form>
+  <li><a href="/archive/">{lang:Archive}</a>
+  {block:PostSummary}
+  <li><a href="{Permalink}">{PostSummary}</a>
+  {/block:PostSummary}
+  {block:DayPage}
+  <li>日付：{Year}年{MonthNumber}月{DayOfMonth}日
+  {/block:DayPage}
+  {block:TagPage}
+   <li><a href="{TagURLChrono}">タグ：{Tag}</a>
+  {/block:TagPage}
+  {block:SearchPage}
+   <li>検索：{SearchQuery}
+  {/block:SearchPage}
+ </ul>
+</nav>
+<div id="container">
+<header id="header">
+ {block:ShowTitle}
+ <h1 class="t__title" title="{Title}"><a href="/">{Title}</a></h1>
+ {/block:ShowTitle}
+ {block:ShowAvatar}
+ <img class="t__avatar {AvatarShape}" src="{PortraitURL-96}" width="96" height="96" alt="avatar">
+ {/block:ShowAvatar}
+ {block:ShowDescription}
+ {block:Description}
+ <p class="t__description">{Description}</p>
+ {/block:Description}
+ {/block:ShowDescription}
+</header>
+<main>
+{block:Posts inlineMediaWidth="700"}
+{block:Text}
+ <article id="post-{PostID}" class="t__text {TagsAsClasses}">
+  {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+  {Body}
+{/block:Text}{block:Photo}
+ <article id="post-{PostID}"
+          class="t__block t__photo {TagsAsClasses}"
+          style="background-image:url('{PhotoURL-1280}')">
+  <a href="{PhotoURL-HighRes}" onclick="Tumblr.Lightbox.init([{
+     'width'   : '{PhotoWidth-Highres}',
+     'height'  : '{PhotoHeight-Highres}',
+     'low_res' : '{PhotoURL-500}',
+     'high_res': '{PhotoURL-HighRes}' }]); return false;">
+  </a>
+{/block:Photo}{block:Panorama}
+ <article id="post-{PostID}"
+          class="t__block t__panorama {TagsAsClasses}"
+          style="background-image:url('{PhotoURL-1280}')">
+  {LinkOpenTag}
+  {LinkCloseTag}
+{/block:Panorama}{block:Photoset}
+ <article id="post-{PostID}" class="t__block t__photoset {TagsAsClasses}">
+  {Photoset-500}
+{/block:Photoset}{block:Quote}
+ <article id="post-{PostID}" class="t__text t__quote t__{Length}quote {TagsAsClasses}">
+  <blockquote>
+   {Quote}
+   {block:Source}<footer class="source">{Source}</footer>{/block:Source}
+  </blockquote>
+{/block:Quote}{block:Link}
+ <article id="post-{PostID}"
+          class="t__block t__link {TagsAsClasses}"
+          {block:Thumbnail}style="background-image:url('{Thumbnail-HighRes}')"{/block:Thumbnail}>
+  <a href="{URL}" {Target}><span>{Name}{block:Host}<br>{Host}{/block:Host}</span></a>
+{/block:Link}{block:Chat}
+ <article id="post-{PostID}" class="t__text t__chat {TagsAsClasses}">
+  {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+  {block:Lines}<p class="item">{block:Name}<b class="speaker">{Name}</b>{/block:Name}<span class="line">{Line}</span></p>{/block:Lines}
+{/block:Chat}{block:Audio}
+ <article id="post-{PostID}" class="t__block t__audio {TagsAsClasses}">
+  {block:AudioEmbed}{AudioEmbed-400}{/block:AudioEmbed}
+  {block:AudioPlayer}{AudioPlayer width="600" height="80"}{/block:AudioPlayer}
+{/block:Audio}{block:Video}
+ <article id="post-{PostID}" class="t__block t__video {TagsAsClasses}">
+  {Video-700}
+ </article>
+{/block:Video}{block:Answer}
+ <article id="post-{PostID}" class="t__text t__answer {TagsAsClasses}">
+  <h1>{Asker}</h1>
+  <blockquote>{Question}</blockquote>
+  {Answer}
+{/block:Answer}
+ </article>
+  <aside>
+   <div class="t__pubdata">
+    <a class="t__permalink" href="{Permalink}" title="{lang:Permalink for this post}"
+{block:Text}
+     >{block:Title}{Title}{/block:Title}</a
+{/block:Text}{block:Photo}
+     >{block:Caption}{Caption}{/block:Caption}</a
+{/block:Photo}{block:Panorama}
+     >{block:Caption}{Caption}{/block:Caption}</a
+{/block:Panorama}{block:Photoset}
+     >{block:Caption}{Caption}{/block:Caption}</a
+{/block:Photoset}{block:Quote}
+     ></a
+{/block:Quote}{block:Link}
+     >{block:Description}{Description}{/block:Description}</a
+{/block:Link}{block:Chat}
+     >{block:Title}{Title}{/block:Title}</a
+{/block:Chat}{block:Audio}
+     >{block:Caption}{Caption}{/block:Caption}</a
+{/block:Audio}{block:Video}
+     >{block:Caption}{Caption}{/block:Caption}</a
+{/block:Video}{block:Answer}
+     ></a
+{/block:Answer}
+     ><wbr>
+   {block:Date}
+   <a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}"
+      title="{Year}年{MonthNumber}月{DayOfMonth}日の投稿"><!-- {lang:Posted on Month DayOfMonth Year} -->
+    <span class="t__time" id="time-{PostID}" data-time="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}</span>
+   </a>
+   <script>printDate('time-{PostID}')</script>{/block:Date}
+   </div><!-- /.t__pubdata -->
+   {block:HasTags}
+    <ul class="t__list tags">{block:Tags}<li><a class="t__tag" href="{TagURL}">#{Tag}</a>{/block:Tags}</ul>
+   {/block:HasTags}
+   <ul class="t__list buttons"><li>{ReblogButton size="18" color="black"}<li>{LikeButton size="18" color="black"}</ul>
+   {block:NoteCount}
+   <div><a href="{Permalink}">{NoteCountWithLabel}</a></div>
+   {/block:NoteCount}
+   {block:ContentSource}
+   <div><a href="{SourceURL}">{lang:Source}: {SourceTitle}</a></div>
+   {/block:ContentSource}
+  </aside>
+ {block:PostNotes}{PostNotes}{/block:PostNotes}
+{/block:Posts}
+{block:NoSearchResults}
+ <article class="t__message">
+  <span>{lang:No posts found}</span>
+ </article>
+{/block:NoSearchResults}
+</main>
+</div><!-- /container -->
+<footer id="footer">
+ <hr>
+ <nav>
+{block:IndexPage}
+ {block:Pagination}
+   <ul class="t__jumppagination">
+    <li class="t__button jump_page page_first"><a href="/page/1">1</a>
+  {block:JumpPagination length="5"}
+   {block:CurrentPage}
+    <li class="t__button current_page page_{PageNumber}">{PageNumber}
+   {/block:CurrentPage}
+   {block:JumpPage}
+    <li class="t__button jump_page page_{PageNumber}"><a href="{URL}">{PageNumber}</a>
+   {/block:JumpPage}
+  {/block:JumpPagination}
+    <li class="t__button jump_page page_last"><a href="/page/{TotalPages}">{TotalPages}</a>
+   </ul>
+   <script>adjPagination();</script>
+ {/block:Pagination}
+{/block:IndexPage}
+{block:PostSummary}
+  <ul class="t__permalinkpagination">
+    <li class="t__button t__nextprev_page"
+   {block:PermalinkPagination}{block:NextPost}
+    style="visibility:visible"><a href="{NextPost}" title="{lang:Next}"><span class="arrow">&#x25B6;</span></a
+   {/block:NextPost}{/block:PermalinkPagination}
+    >
+    <li>{PostSummary}
+    <li class="t__button t__nextprev_page"
+   {block:PermalinkPagination}{block:PreviousPost}
+    style="visibility:visible"><a href="{PreviousPost}" title="{lang:Prev}"><span class="arrow">&#x25C0;</span></a
+   {/block:PreviousPost}{/block:PermalinkPagination}
+    >
+  </ul>
+{/block:PostSummary}
+{block:DayPage}
+  <ul class="t__daypagination">
+    <li class="t__button t__nextprev_page"
+   {block:DayPagination}{block:NextDayPage}
+    style="visibility:visible"><a href="{NextDayPage}" title="{lang:Newer}"><span class="arrow">&#x25B6;</span></a
+   {/block:NextDayPage}{/block:DayPagination}
+    >
+    <li>日付：{Year}年{MonthNumber}月{DayOfMonth}日
+    <li class="t__button t__nextprev_page"
+   {block:DayPagination}{block:PreviousDayPage}
+    style="visibility:visible"><a href="{PreviousDayPage}" title="{lang:Older}"><span class="arrow">&#x25C0;</span></a
+   {/block:PreviousDayPage}{/block:DayPagination}
+    >
+  </ul>
+{/block:DayPage}
+{block:TagPage}
+  <ul class="t__tagpage">
+   <li>タグ：{Tag}
+  </ul>
+{/block:TagPage}
+{block:SearchPage}
+  <ul class="t__searchpage">
+   <li>検索：{SearchQuery}
+  </ul>
+{/block:SearchPage}
+ </nav>
+ <span class="t__copyright">&copy; {CopyrightYears} {Title}・<a href="https://gist.github.com/metasta/5986308">長雨</a></span>
+</footer>
+<script>
+(function(){
+ adjHeights('article');
+})();
+(function(){
+ document.getElementById('webfont').rel = 'stylesheet';
+})();
+</script>
+</body>
+</html>

@@ -62,6 +62,7 @@ tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Ch
 
 ## 自分用メモ TODO
 
+- **reblog 記事の表示がカオス**
 - Edge と IE でタイトルの中央揃えがずれる
 - Edge と Windows 版 Chrome でルビのある行間が広くなる
 - IE で検索フォームの虫眼鏡が下にずれる

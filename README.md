@@ -2,13 +2,13 @@
 
 tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Chrome, Opera, Firefox, IE10+, Edge 対応
 
-デモページ: [nagame-theme.tumblr.com](http://nagame-theme.tumblr.com)
+デモ [nagame-theme.tumblr.com](http://nagame-theme.tumblr.com)
 
 ## 概要
 
 日本語縦書きに適したテーマです。web 上で縦書きを実現する技術は当初 Safari や Google Chrome など Webkit 系のブラウザに実装され、のち Internet Explorer や Firefox にも導入されました。この縦書きテーマ『長雨（ながめ）』を使用すると、主要なモダンブラウザ上で縦書き表示を実現することができます（IE は10以上が必要）。
 
-実験的な追加機能として、Webフォント（旧字明朝体フォント『[馬酔木明朝](https://metasta.github.io/asebi/)』）の使用もカスタマイズ画面からオプションで可能です。
+実験的な追加機能として、Webフォント（旧字明朝体フォント『[馬酔木明朝](https://metasta.github.io/asebi/)』）もオプションで使用可能です。
 
 ## 使用法
 
@@ -74,7 +74,7 @@ tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Ch
 
 ### *2016.02.19*
  - 追加: IE10+, Edge に対応
- - プロジェクトを GithubGist から Github へ移動
+ - プロジェクトを GitHubGist から GitHub へ移動
  - パノラマのlightbox読み込み時に表示が崩れる問題を修正
 
-さらに以前の更新履歴は [GithubGistの旧ページ](https://gist.github.com/metasta/5986308)で
+さらに以前の更新履歴は [GitHubGistの旧ページ](https://gist.github.com/metasta/5986308)で

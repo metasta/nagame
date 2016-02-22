@@ -2,7 +2,7 @@
 
 tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Chrome, Opera, Firefox, IE10+, Edge 対応
 
-デモ [nagame-theme.tumblr.com](http://nagame-theme.tumblr.com)
+デモ [nagame-theme.tumblr.com](https://nagame-theme.tumblr.com)
 
 ## 概要
 

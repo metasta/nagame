@@ -454,14 +454,15 @@ article.t__block {
  border-radius:3px;
  box-sizing:border-box;
 }
-article.t__quote .source {
+blockquote .source {
  margin: 4em 0 0 1.9rem;
  text-align: right;
  font-size: .84rem;
  line-height: 1.9rem;
 }
-article.t__quote .source:before {content: '\FF08'}
-article.t__quote .source:after {content: '\FF09'}
+blockquote .source:before {content: '\FF08'}
+blockquote .source:after {content: '\FF09'}
+article.t__answer .source a:after {content: ' ';}
 article.t__chat .item {
  display:list-item;
  list-style-type:none;
@@ -676,8 +677,9 @@ ol.notes img {
  </article>
 {/block:Video}{block:Answer}
  <article id="post-{PostID}" class="t__text t__answer {TagsAsClasses}">
-  <h1>{Asker}</h1>
-  <blockquote>{Question}</blockquote>
+  <blockquote>{Question}
+  <footer class="source">{lang:Asked by Asker 2}</footer>
+  </blockquote>
   {Answer}
 {/block:Answer}
  </article>
@@ -797,12 +799,9 @@ ol.notes img {
  <span class="t__copyright">&copy; {CopyrightYears} {Title}・<a href="https://github.com/metasta/nagame">長雨</a></span>
 </footer>
 <script>
-(function(){
- adjHeights('article');
-})();
-(function(){
  document.getElementById('webfont').rel = 'stylesheet';
-})();
+ adjHeights('article'); /* once */
+ window.onload = function(){adjHeights('article');} /* twice */
 </script>
 </body>
 </html>

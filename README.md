@@ -4,7 +4,7 @@ tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Ch
 
 デモ [nagame-theme.tumblr.com](https://nagame-theme.tumblr.com)
 
-テーマファイル [nagame-theme.html](https://raw.githubusercontent.com/metasta/nagame/master/nagame-theme.html) (2016.02.19)
+テーマファイル [nagame-theme.html](https://raw.githubusercontent.com/metasta/nagame/master/nagame-theme.html) (2016.03.01)
 
 ## 概要
 
@@ -63,6 +63,10 @@ tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Ch
 （例：縦書きtumblrテーマ → 縦書き tumblr テーマ）
 
 ## History
+
+
+### *2016.03.01*
+ - 質問投稿のレイアウトを調整
 
 ### *2016.02.19*
  - 追加: IE10+, Edge に対応

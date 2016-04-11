@@ -40,7 +40,7 @@ tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Ch
              旧字で表記された文章の<span class="shinji">一部分だけを新字に変更</span>する
 
 - 以下の漢字はフォントだけでは旧表記が実現できないので、判断して正しい字を入力する必要がある。
-    - 2つ以上の旧字をもつ「欠（缺）」「弁（瓣辯辨）」「予（豫）」「余（餘）」([このページ](https://metasta.github.io/asebi/annex/note.html) にメモをまとめた)、加えて「芸（藝）」も
+    - 2つ以上の旧字をもつ「弁（瓣辯辨）」「予（豫）」「余（餘）」([このページ](https://metasta.github.io/asebi/annex/note.html) にメモをまとめた)
     - 「画（劃）」「技量（伎倆）」「知恵（智慧）」「包帯（繃帯）」など「[同音の漢字による書きかえ](http://kokugo.bunka.go.jp/kokugo_nihongo/joho/kakuki/03/bukai03/03.html)」の対象となった字や語
 
 ### ルビについて

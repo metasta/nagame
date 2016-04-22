@@ -4,7 +4,8 @@ tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Ch
 
 デモ [nagame-theme.tumblr.com](https://nagame-theme.tumblr.com)
 
-テーマファイル [nagame-theme.html](https://raw.githubusercontent.com/metasta/nagame/master/nagame-theme.html) (2016.03.01)
+テーマファイル [nagame-theme.html](https://raw.githubusercontent.com/metasta/nagame/master/nagame-theme.html) (2016.04.23)
+
 
 ## 概要
 
@@ -12,11 +13,13 @@ tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Ch
 
 実験的な追加機能として、Webフォント（旧字明朝体フォント『[馬酔木明朝](https://metasta.github.io/asebi/)』）もオプションで使用可能です。
 
+
 ## 使用法
 
  1. [nagame-theme.html](https://raw.githubusercontent.com/metasta/nagame/master/nagame-theme.html) の内容を全選択・コピーする
  2. tumblr のテーマカスタマイズ画面を開き「html を編集」をクリック
  3. 元の html を消去して nagame-theme.html をペースト
+
 
 ## カスタマイズ（テーマ編集画面から）
 
@@ -24,6 +27,7 @@ tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Ch
 - テキストの色（デフォルト: #222）
 - 使用フォント（游明朝体(YuMin) or 旧字明朝体フォント 馬酔木明朝(Asebi)）
 - 段組の高さ（デフォルト：26字）
+
 
 ## 使用に際して
 
@@ -62,8 +66,21 @@ tumblr で利用できる縦スクロール型の縦書きテーマ。Safari, Ch
     - 日本語と英数字との間には半角スペースで間隔を空けるとよい。  
 （例：縦書きtumblrテーマ → 縦書き tumblr テーマ）
 
-## History
 
+## ライセンス
+
+MIT ライセンスのもと公開します。つまり、
+
+- 複製、改変、再配布、販売、何にでも自由に使ってください。
+- ソースコード冒頭の著作権表示は改変せず残しておいてください。
+- 無保証です。もしこのテーマを利用したことで何か問題が起こっても、作者はなんの責任も負いません。
+
+
+## 更新履歴
+
+### *2016.04.23*
+ - フォールバックフォントとしてヒラギノ明朝を設定 (iOS用。将来スマホテーマを作成するまでの一時策)
+ - MIT ライセンスを明記
 
 ### *2016.03.01*
  - 質問投稿のレイアウトを調整
